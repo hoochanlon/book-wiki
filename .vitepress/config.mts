@@ -16,6 +16,7 @@ export default withMermaid(
     
     themeConfig: {
       // https://vitepress.dev/reference/default-theme-config
+      logo: '/icons/books.svg',
       nav: [
         { text: '首页', link: '/' },
       ],
@@ -25,7 +26,15 @@ export default withMermaid(
       ],
 
       search: {
-        provider: 'local'
+        provider: 'local',
+        options: {
+          translations: {
+            button: {
+              buttonText: '搜索',
+              buttonAriaLabel: '搜索文档',
+            },
+          },
+        },
       },
 
       // 关闭文档底部的"最近更新"时间戳
@@ -43,6 +52,7 @@ export default withMermaid(
 
       // Teek 主题配置
       homeCardListPosition: false, // 关闭首页右侧卡片栏
+      sidebarTrigger: true, // 文章页显示侧边栏折叠按钮
 
       // 只留 Teek 页脚，避免和 VitePress footer 各写一遍版权
       footerInfo: {
