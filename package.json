@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/hoochanlon/book-wiki#readme",
   "devDependencies": {
-    "vitepress": "^1.0.0",
+    "vitepress": "^1.6.4",
     "vitepress-sidebar": "^1.40.0",
     "vitepress-theme-teek": "^1.6.2",
     "vitepress-plugin-mermaid": "^2.0.0",

@@ -50,6 +50,13 @@ export default withMermaid(
     markdown: {
       lineNumbers: true
     },
+
+    // SSR 时让 Vite 打包 teek，避免 Node 解析 vitepress/theme 的无后缀导入失败
+    vite: {
+      ssr: {
+        noExternal: ['vitepress-theme-teek'],
+      },
+    },
     
     // Mermaid 配置（可选）
     mermaid: {
