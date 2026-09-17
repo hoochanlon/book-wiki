@@ -18,7 +18,7 @@ VitePress 默认**不会**按文件夹扫描生成左侧目录。默认能力是
 
 - 用文件一级标题或 frontmatter 的 `title` 作为菜单名
 - 排除 `index.md`、`README.md`
-- 首页「开始阅读」走 `/readme`：源文件仍是 `README.md`，由 `rewrites` 映射到小写路由
+- 首页「开始阅读」走 `/readme`：源文件仍是 `README.md`，由 `rewrites` 映射到小写路由。GitHub Pages 区分大小写，`/README.html` 会 404；构建时会再生成一份 `README.html` 别名，路由里也会把大写路径转到 `/readme`
 - 排除 `.vitepress`、`.github`、`node_modules`
 - 不按文件名排序，保持目录里的自然顺序
 

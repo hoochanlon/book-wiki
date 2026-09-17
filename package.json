@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "vitepress build && node scripts/alias-readme-html.mjs",
     "docs:preview": "vitepress preview"
   },
   "repository": {
