@@ -10,6 +10,9 @@ export default withMermaid(
     description: "把一本书蒸馏成可检索、可追溯、可累积的知识库",
     base: '/book-wiki/',
     ignoreDeadLinks: true,
+    rewrites: {
+      'README.md': 'readme.md',
+    },
     
     themeConfig: {
       // https://vitepress.dev/reference/default-theme-config
@@ -23,11 +26,6 @@ export default withMermaid(
 
       search: {
         provider: 'local'
-      },
-
-      footer: {
-        message: '基于 VitePress 构建',
-        copyright: 'Copyright © 2026'
       },
 
       // 关闭文档底部的"最近更新"时间戳
@@ -45,6 +43,19 @@ export default withMermaid(
 
       // Teek 主题配置
       homeCardListPosition: false, // 关闭首页右侧卡片栏
+
+      // 只留 Teek 页脚，避免和 VitePress footer 各写一遍版权
+      footerInfo: {
+        copyright: {
+          createYear: 2026,
+          suffix: 'hoochanlon',
+        },
+      },
+
+      // 超高代码块默认折叠；展开/折叠状态由主题侧 sessionStorage 记住
+      codeBlock: {
+        collapseHeight: 700,
+      },
     },
 
     markdown: {

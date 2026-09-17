@@ -1,0 +1,4 @@
+/* 首页没有阅读进度：隐藏 Teek 右下角百分比回到顶部按钮 */
+html[data-home-page] .tk-right-bottom-button .back-top {
+  display: none !important;
+}
